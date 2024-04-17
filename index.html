@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Input radio animado</title>
+</head>
+<body onload="selecionar()">
+    <main>
+        <h2>Input radio animado</h2>
+        <form>
+            <section class="option">
+                <input type="radio" name="options" id="opt1" onclick="selecionar()" checked>
+                <label for="opt1">Option 1</label>
+            </section>
+            <section class="option">
+                <input type="radio" name="options" id="opt2" onclick="selecionar()">
+                <label for="opt2">Option 2</label>
+            </section>
+            <section class="option">
+                <input type="radio" name="options" id="opt3" onclick="selecionar()">
+                <label for="opt3">Option 3</label>
+            </section>
+            <div class="marcador"></div>
+        </form>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

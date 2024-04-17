@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #212121;
+    color: #e7e7e7;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    font-size: clamp(18px, 6vw, 28px);
+    margin-block: .6rem;
+}
+
+form {
+    background-color: rgb(79, 67, 91);
+    width: clamp(150px, 50vw, 250px);
+    border-radius: .3rem;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    position: relative;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #0ff5;
+    transition: .3s ease-in-out;
+}
+
+label {
+    padding-inline: .6rem .3rem;
+}
+
+input, label { cursor: pointer; }
+
+.marcador {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    scale: .5;
+    background-color: #09f;
+    position: absolute;
+    top: 0;
+    display: none;
+    pointer-events: none;
+    transition: all .4s cubic-bezier(.92,.54,.12,.63);
+}
+
+.animacao {
+    animation: mover .4s 1 linear;
+}
+
+@keyframes mover {
+    50% {
+        transform: translateX(-175%);
+    }
+}
+
+input:checked {
+    border: 2px solid #09f;
+    box-shadow: 0 0 5px #808080;
+}
+
+input:checked + label { color:  #ffd700; }
+
+.bolha {
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(rgb(168, 121, 214) 40%, rgb(29, 11, 48));
+    filter: brightness(1.2) blur(2.5vmax);
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: opacity .3s linear;
+}
