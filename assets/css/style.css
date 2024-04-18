@@ -93,3 +93,8 @@ input:checked + label { color:  #ffd700; }
     pointer-events: none;
     transition: opacity .3s linear;
 }
+
+@media screen and (max-width: 420px),
+screen and (max-height: 500px) {
+    .bolha { display: none; }
+}
